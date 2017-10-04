@@ -40,6 +40,7 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/reposit
     php7-session \
     php7-soap \
     php7-xml \
+    php7-simplexml \
     php7-xmlreader \
     php7-xmlwriter \
     php7-tidy \
