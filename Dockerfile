@@ -85,7 +85,8 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/reposit
     php -r "unlink('composer-setup.php');" && \
 
     # www-data 
-    addgroup -g 1000 -S www-data && \
+  	deluser www-data  && \	
+    	addgroup -g 1000 -S www-data && \
 	adduser -u 1000 -D -S -G www-data www-data && \
   
     rm -rf /var/cache/apk/*  
@@ -93,6 +94,7 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/reposit
 EXPOSE 9000
 
 WORKDIR /vhosts
+USER www-data
 
 CMD ["php-fpm7", "-F"]
 
