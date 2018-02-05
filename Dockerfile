@@ -85,7 +85,6 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/reposit
     php -r "unlink('composer-setup.php');" && \
 
     # www-data 
-  	deluser www-data  && \	
     	addgroup -g 1000 -S www-data && \
 	adduser -u 1000 -D -S -G www-data www-data && \
   
