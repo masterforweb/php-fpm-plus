@@ -19,6 +19,7 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/reposit
     php7-bcmath \
     php7-dom \
     php7-ctype \
+    php7-pear \
     php7-curl \
     php7-fileinfo \
     php7-gd \
@@ -49,7 +50,7 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/reposit
     php7-redis \
     php7-amqp  \
     php7-fpm && \
-
+    pecl update-channels && \	
     apk add --no-cache git  && \
 
     apk add --no-cache --virtual .imagick-build-dependencies autoconf curl g++ gcc imagemagick-dev libtool make tar && \
