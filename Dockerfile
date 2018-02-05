@@ -93,7 +93,6 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/reposit
 EXPOSE 9000
 
 WORKDIR /vhosts
-USER www-data
 
 CMD ["php-fpm7", "-F"]
 
